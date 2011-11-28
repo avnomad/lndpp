@@ -1,0 +1,9 @@
+syntax: regexp
+Debug/*
+ipch/*
+Release/*
+syntax: glob
+differentiation.opensdf
+differentiation.sdf
+differentiation.suo
+differentiation/main.asm
