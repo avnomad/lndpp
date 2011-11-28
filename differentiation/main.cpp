@@ -200,6 +200,23 @@ inline auto Differentiate(Cos<T> exp)->decltype(-sin(exp.iT)*Differentiate(exp.i
 }
 
 
+template<typename Func>
+double Newton_Raphson(Func f,double new_x,double accuracy,unsigned int *iterations)
+{
+    double old_x;
+    
+    *iterations = 0;
+    do
+    {
+		(*iterations)++;
+		old_x = new_x;
+		new_x = old_x-f(old_x)/Differentiate(f)(old_x);
+	}
+	while(fabs(new_x-old_x)>accuracy);
+	return new_x;
+}
+
+
 int main()
 {
 	//Arg z;
@@ -302,6 +319,9 @@ int main()
 	//print(f);
 	//cout << endl;
 
+	unsigned int iterations = 0;
+	cout << "**" << Newton_Raphson((x-3)*(x+2),2,1e-6,&iterations) << " after ";
+	cout << iterations << endl;
 	//cout << f(-2.5) << endl;
 	//cout << Differentiate(f)(1.5) << endl;
 
