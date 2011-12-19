@@ -1,6 +1,51 @@
 #ifndef LNDPP_H
 #define LNDPP_H
 
+//template<typename C> struct Const;
+//struct Arg;
+//template<typename L,typename R> struct Sum;
+//template<typename L,typename R> struct Diff;
+//template<typename L,typename R> struct Prod;
+//template<typename L,typename R> struct Quot;
+//template<typename T> struct Neg;
+//template<typename T> struct Sin;
+//template<typename T> struct Cos;
+//
+//
+//template<typename T>
+//struct isNode
+//{
+//	static const bool value = false;
+//};
+//
+//#define is_node(A) struct isNode<A > \
+//{ \
+//	static const bool value = true; \
+//};
+//
+//#define binary_is_node(node) template<typename L, typename R> \
+//struct isNode<node<L,R> > \
+//{ \
+//	static const bool value = true; \
+//};
+//
+//template<typename C>
+//is_node(Const<C>)
+//template< >
+//is_node(Arg)
+//binary_is_node(Sum)
+//binary_is_node(Diff)
+//binary_is_node(Prod)
+//binary_is_node(Quot)
+//template<typename T>
+//is_node(Neg<T>)
+//template<typename T>
+//is_node(Sin<T>)
+//template<typename T>
+//is_node(Cos<T>)
+//#undef is_node
+//#undef binary_is_node
+
 template<typename C>
 struct Const	// maybe name it C for 'constant' function
 {
@@ -11,9 +56,12 @@ struct Const	// maybe name it C for 'constant' function
 	template<typename T>
 	inline C operator()(T t)	// better pass by reference?
 	{
+		//static_assert(!isNode<C>::value,"Const nodes cannot contain other nodes");
+		//static_assert(!isNode<T>::value,"Lambda expressions should not (?) be applied to lambda expressions");
 		return iC;
 	} // end function operator()
 };
+
 
 struct Arg	// maybe name it I for 'identity' function
 {
