@@ -68,7 +68,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="general test-case.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="design.jpg" />
