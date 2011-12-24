@@ -2,8 +2,6 @@
 using std::cout;
 using std::endl;
 
-#include <typeinfo>
-#include <cmath>
 //#include <cstdlib>
 
 #include "ënd++.h"

@@ -1,6 +1,8 @@
 #ifndef LNDPP_H
 #define LNDPP_H
 
+#include <cmath>
+
 //template<typename C> struct Const;
 //struct Arg;
 //template<typename L,typename R> struct Sum;
