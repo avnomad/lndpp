@@ -74,7 +74,7 @@
     <None Include="design.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="λnd++.h" />
+    <ClInclude Include="lnd++.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
